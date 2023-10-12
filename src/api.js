@@ -8,13 +8,9 @@ const app = express();
 require('./config/db.js')
 const router = express.Router();
 
-// questions Routes
+//Routes
 const questionsAnswersRoutes = require('./routes/questionsAnswers')
-
-// user Routes
 const userRoutes = require('./routes/users')
-
-// search Routes
 const searchRoutes = require('./routes/search')
 
 // cors middleware
