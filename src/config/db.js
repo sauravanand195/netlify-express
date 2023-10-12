@@ -1,10 +1,7 @@
 const mongoose = require('mongoose');
-const dbUrl = process.env.DATABASE_URL
-const dbString = dbUrl?.toString() || ""
+// const dbUrl = process.env.DATABASE_URL
 
-console.log(typeof(dbString))
-
-module.exports.mongoConnection = mongoose.connect(dbString, {
+module.exports.mongoConnection = mongoose.connect("mongodb+srv://saurav:saurav@cluster0.cowzm.mongodb.net/test?retryWrites=true&w=majority", {
     //must add in order to not get any error masseges:
     useNewUrlParser: true,
     useUnifiedTopology: true,
