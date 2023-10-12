@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const dbUrl = process.env.DATABASE_URL
-const dbString = dbUrl?.toString()
+const dbString = dbUrl?.toString() || ""
 
 console.log(typeof(dbString))
 
