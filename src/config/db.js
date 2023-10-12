@@ -9,6 +9,6 @@ module.exports.mongoConnection = mongoose.connect(dbUrl, {
     if(!err){
         console.log('Db connection is successfull');
     } else {
-        console.log('Db connection failed');
+        console.log(err);
     }
 })
