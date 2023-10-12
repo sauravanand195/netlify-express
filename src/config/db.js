@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const dbUrl = process.env.DATABASE_URL || 'test'
+const dbUrl = process.env.DATABASE_URL
 
 module.exports.mongoConnection = mongoose.connect(dbUrl , {
     //must add in order to not get any error masseges:
