@@ -12,6 +12,7 @@ const router = express.Router();
 const questionsAnswersRoutes = require('./routes/questionsAnswers')
 const userRoutes = require('./routes/users')
 const searchRoutes = require('./routes/search')
+const todoRoutes = require('./routes/todo')
 
 // cors middleware
 app.use(cors())
@@ -24,6 +25,7 @@ app.use(express.json())
 app.use('/qna', questionsAnswersRoutes)
 app.use('/users', userRoutes)
 app.use('/search', searchRoutes)
+app.use('/todo', todoRoutes)
 
 router.get('/', (req, res) => {
     res.json({ 'test': 'server is up and running ...' })
