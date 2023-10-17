@@ -35,7 +35,7 @@ const addTodos = async (req, res, next) => {
 };
 
 const updateTodo = async (req, res, next) => {
-    const { id, task, status } = req.body
+    const { id, task, description, priority, status } = req.body
     try {
         await todo.updateOne(
             { _id: id },
