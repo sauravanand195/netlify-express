@@ -14,11 +14,13 @@ const getTodos = async (req, res, next) => {
 };
 
 const addTodos = async (req, res, next) => {
-    const { task, status } = req.body;
+    const { task, description, priority, status } = req.body;
     try {
         await todo.insertMany([
             {
                 task,
+                description,
+                priority,
                 status
             },
         ]);
